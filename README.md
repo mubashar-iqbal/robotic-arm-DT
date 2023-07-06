@@ -82,6 +82,16 @@ update_machine()
 ```
 This cell applies the previously generated function _select_row()_ and updates the existing model on the Azure platform. In addition, to the inputs required for _select_row()_ the function also requires the Digital Twin´s name in order to indentify the correct twin instance.
 
+```
+predict_model()
+```
+This function requires the dataframe used for simulation, the index identifying a specific row, and a trained model as input. It transforms the row of data into processable form and predicts if the occurence is an anomaly or not, given the earlier trained random forest model. 
+
+```
+start_machine()
+```
+By starting the machine, the code will iterate over the available simulation dataframe. For each entry the function will update the model on Azure platform with _update_machine()_ and furthermore, predict if the current data suggests the occurence of anomalies. This will be done every second, however speed can be adjusted with the _time.sleep()_ module, depending on  local available computing power. 
+
 
 ## License agreement
 The applied license can be found here:
