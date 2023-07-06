@@ -1,26 +1,34 @@
 # seleniumforest
 
-This is the code repo to my master thesis
+
 
 ## Table of contents
 * [General info](#general-info)
 * [Technologies](#technologies)
 * [Setup](#setup)
+* [Algorithm Description](#algorithmdescription)
 
 ## General info
-This project is simple Lorem ipsum dolor generator.
+This project contains the code for my master thesis. 
 	
 ## Technologies
 Project is created with:
-* Lorem version: 12.3
-* Ipsum version: 2.33
-* Ament library version: 999
+* Python 3.7.9
+
+  Other Python versions led to dependecy errors during the modul install. Therefore, I recommend to use 3.7.9.
+
 	
 ## Setup
-To run this project, install it locally using npm:
+To run this project, install it locally using pip or your package manager of choice:
 
 ```
-$ cd ../lorem
-$ npm install
-$ npm start
+%pip install shap
+%pip install numpy
+%pip install pandas
+%pip install pyspark
+%pip install matplotlib
+%pip install azure.identity
+%pip install azure.digitaltwins.core
 ```
+
+## Algorithm Description
