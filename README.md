@@ -20,7 +20,7 @@ Project is created with:
 
 * Microsoft Azure - Digital Twin Platform
 
-* Mincrosoft Visual Studio Code IDE
+* Microsoft Visual Studio Code IDE
 
 	
 ## Setup
@@ -52,6 +52,15 @@ The code generates a JSON file to set up the first Digital Twin instance on the 
 ```
 A browser window will open and you will be asked to enter your Azure credentials. This enables the usage of Azure functionalities within VSC, without having to manually authenticate. 
 
+```
+Random Forest
+```
+Builds a random forest model with the provided training data. At the end, the accuracy score and confusion matrix of the test set will be printed.
+
+```
+Permutation Importance
+```
+Displays the permutation feature importance of the training data. At the end it prints the regarding importance score for each feature used. Additionaly, the standard deviation for each feature is displayed.
 
 
 ## License agreement
