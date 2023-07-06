@@ -7,7 +7,7 @@
 * [Technologies](#technologies)
 * [Setup](#setup)
 * [Algorithm description](#algorithm-description)
-	* [Prerequisites](#prerequisites)
+	* [Pre-requisites](#pre-requisites)
    	* [Simulation](#simulation)
 * [License agreement](#license-agreement)
 
@@ -44,7 +44,7 @@ In addition to an active Mincrosoft Azure account, the Microsoft Azure CLI is al
 
 ## Algorithm Description
 
-### Prerequisites
+### Pre-requisites
 
 ```
 Generate Model
