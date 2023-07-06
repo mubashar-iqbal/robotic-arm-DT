@@ -92,7 +92,7 @@ This function requires the dataframe used for simulation, the index identifying 
 ```
 start_machine()
 ```
-By starting the machine, the code will iterate over the available simulation dataframe. For each entry the function will update the model on Azure platform with _update_machine()_ and furthermore, predict if the current data suggests the occurence of anomalies. This will be done every second, however speed can be adjusted with the _time.sleep()_ module, depending on  local available computing power. 
+This simulates a running robotic arm without any labled information about anomalies. By starting the machine, the code will iterate over the available simulation dataframe. For each entry the function will update the model on Azure platform with _update_machine()_ and furthermore, predict if the current data suggests the occurence of anomalies. This will be done every second, however speed can be adjusted with the _time.sleep()_ module, depending on  local available computing power. Please note, that there is no break condition. The machine will run untill the test set is out of data and it is interruppted manually.
 
 
 ## License agreement
