@@ -7,6 +7,8 @@
 * [Technologies](#technologies)
 * [Setup](#setup)
 * [Algorithm description](#algorithm-description)
+	* [Prerequisites](#prerequisites)
+   	* [Simulation](#simulation)
 * [License agreement](#license-agreement)
 
 ## General info
