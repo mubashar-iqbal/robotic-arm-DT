@@ -34,6 +34,12 @@ To run this project, install the following modules locally by using pip or your 
 
 ## Algorithm Description
 
+```
+Generate Model
+```
+The code generates a JSON file to set up the first Digital Twin instance on the Microsoft Azure platform. As input use the 'robotic-arms.csv'. The original CSV contains columns that are not used during this project. Therefore, it is recommended to delete the unwanted ones before generating the model.
+
+
 ## License agreement
 The applied license can be found here:
 [MIT License](https://github.com/h1548782/seleniumforest/blob/main/MIT-LICENSE.txt)
