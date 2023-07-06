@@ -6,7 +6,7 @@
 * [General info](#general-info)
 * [Technologies](#technologies)
 * [Setup](#setup)
-* [Algorithm Description](#algorithmdescription)
+* [Algorithm description](#algorithm-description)
 
 ## General info
 This project contains the code for my master thesis. 
