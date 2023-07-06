@@ -18,6 +18,8 @@ Project is created with:
 
   Other Python versions led to dependecy errors during the modul install. Therefore, I recommend to use 3.7.9.
 
+* Microsoft Azure - Digital Twin Platform  
+
 	
 ## Setup
 To run this project, install the following modules locally by using pip or your package manager of choice:
@@ -31,6 +33,10 @@ To run this project, install the following modules locally by using pip or your 
 %pip install azure.identity
 %pip install azure.digitaltwins.core
 ```
+
+Furthermore, the Microsoft Azure CLI is also neccessary:
+
+[Azure CLI](https://ojuliuscoder.medium.com/installing-and-using-azure-cli-in-visual-studio-code-a382d2b09bfa)
 
 ## Algorithm Description
 
