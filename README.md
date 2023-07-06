@@ -19,7 +19,7 @@ Project is created with:
 
 	
 ## Setup
-To run this project, install it locally using pip or your package manager of choice:
+To run this project, install the following modules locally by using pip or your package manager of choice:
 
 ```
 %pip install shap
