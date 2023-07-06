@@ -78,9 +78,9 @@ select_row()
 This function fetches a specific line out of the provided dataframe by using the name of the dataframe and the desired index row as input. This data will then be used to update the model on the Azure platform.
 
 ```
-Update model on Azure
+update_machine()
 ```
-This cell applies the previously generated function select_row() and updates the existing model on the Azure platform. In addition, to the inputs required for select_row() the function also requires the Digital Twin´s name in order to indentify the correct twin instance.
+This cell applies the previously generated function _select_row()_ and updates the existing model on the Azure platform. In addition, to the inputs required for _select_row()_ the function also requires the Digital Twin´s name in order to indentify the correct twin instance.
 
 
 ## License agreement
