@@ -7,7 +7,7 @@
 * [Technologies](#technologies)
 * [Setup](#setup)
 * [Algorithm description](#algorithm-description)
-* [License Agreement](#license-agreement)
+* [License agreement](#license-agreement)
 
 ## General info
 This project contains the code for my master thesis. 
@@ -18,7 +18,9 @@ Project is created with:
 
   Other Python versions led to dependecy errors during the modul install. Therefore, I recommend to use 3.7.9.
 
-* Microsoft Azure - Digital Twin Platform  
+* Microsoft Azure - Digital Twin Platform
+
+* Mincrosoft Visual Studio Code IDE
 
 	
 ## Setup
@@ -34,7 +36,7 @@ To run this project, install the following modules locally by using pip or your 
 %pip install azure.digitaltwins.core
 ```
 
-Furthermore, the Microsoft Azure CLI is also neccessary:
+FIn addition to an active Mincrosoft Azure account, the Microsoft Azure CLI is also neccessary. It can be downloaded here:
 
 [Azure CLI](https://ojuliuscoder.medium.com/installing-and-using-azure-cli-in-visual-studio-code-a382d2b09bfa)
 
@@ -44,6 +46,12 @@ Furthermore, the Microsoft Azure CLI is also neccessary:
 Generate Model
 ```
 The code generates a JSON file to set up the first Digital Twin instance on the Microsoft Azure platform. As input use the 'robotic-arms.csv'. The original CSV contains columns that are not used during this project. Therefore, it is recommended to delete the unwanted ones before generating the model.
+
+```
+!az login
+```
+A browser window will open and you will be asked to enter your Azure credentials. This enables the usage of Azure functionalities within VSC, without having to manually authenticate. 
+
 
 
 ## License agreement
