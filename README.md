@@ -7,6 +7,7 @@
 * [Technologies](#technologies)
 * [Setup](#setup)
 * [Algorithm description](#algorithm-description)
+* [License Agreement](#license-agreement)
 
 ## General info
 This project contains the code for my master thesis. 
@@ -32,3 +33,7 @@ To run this project, install the following modules locally by using pip or your 
 ```
 
 ## Algorithm Description
+
+## License agreement
+The applied license can be found here:
+[MIT License]([https://github.com/user/repo/blob/branch/other_file.md](https://github.com/h1548782/seleniumforest/blob/main/MIT-LICENSE.txt)https://github.com/h1548782/seleniumforest/blob/main/MIT-LICENSE.txt)
