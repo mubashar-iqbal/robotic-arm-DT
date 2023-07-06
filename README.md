@@ -36,4 +36,4 @@ To run this project, install the following modules locally by using pip or your 
 
 ## License agreement
 The applied license can be found here:
-[MIT License]([https://github.com/user/repo/blob/branch/other_file.md](https://github.com/h1548782/seleniumforest/blob/main/MIT-LICENSE.txt)https://github.com/h1548782/seleniumforest/blob/main/MIT-LICENSE.txt)
+[MIT License](https://github.com/h1548782/seleniumforest/blob/main/MIT-LICENSE.txt)
