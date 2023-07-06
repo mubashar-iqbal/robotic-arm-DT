@@ -42,6 +42,8 @@ In addition to an active Mincrosoft Azure account, the Microsoft Azure CLI is al
 
 ## Algorithm Description
 
+### Prerequisites
+
 ```
 Generate Model
 ```
@@ -61,6 +63,24 @@ Builds a random forest model with the provided training data. At the end, the ac
 Permutation Importance
 ```
 Displays the permutation feature importance of the training data. At the end it prints the regarding importance score for each feature used. Additionaly, the standard deviation for each feature is displayed.
+
+```
+SHAP
+```
+The SHAP section focuses on providing further insight into the various features. It shows plot of either global or local instances. Furthermore, there is a seperation between normal and anamolous occurences. 
+
+### Simulation
+The following functions are used to run the simulation of a running robotic arm. During the simulation, the test set of the previously build train- and test split was used. It is neccessary to run each code cell before starting the simulation, as it requires trained models to run without errors.
+
+```
+select_row()
+```
+This function fetches a specific line out of the provided dataframe by using the name of the dataframe and the desired index row as input. This data will then be used to update the model on the Azure platform.
+
+```
+Update model on Azure
+```
+This cell applies the previously generated function select_row() and updates the existing model on the Azure platform. In addition, to the inputs required for select_row() the function also requires the Digital Twin´s name in order to indentify the correct twin instance.
 
 
 ## License agreement
