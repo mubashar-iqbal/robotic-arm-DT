@@ -42,6 +42,8 @@ In addition to an active Mincrosoft Azure account, the Microsoft Azure CLI is al
 
 [Azure CLI](https://ojuliuscoder.medium.com/installing-and-using-azure-cli-in-visual-studio-code-a382d2b09bfa)
 
+Make sure that the correct Digital Twin schema is setup on the Azure platform. Otherwise parts of the code will not run properly. To set it up, use _digital-twin-schema.json_ in the upload model section. It already contains the five neccassary sensor components to simulate a robotic arm.
+
 ## Algorithm Description
 
 ### Pre-requisites
