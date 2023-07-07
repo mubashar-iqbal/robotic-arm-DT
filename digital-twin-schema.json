@@ -1,0 +1,38 @@
+{
+    "@id": "dtmi:example:RoboArm;1",
+    "@type": "Interface",
+    "displayName": "RoboArm",
+    "contents": [
+        {
+            "@type": "Property",
+            "name": "Norm_of_Cartesion_Linear_Momentum",
+            "schema": "double"
+        },
+        {
+            "@type": "Property",
+            "name": "Robot_Current",
+            "schema": "double"
+        },
+        {
+            "@type": "Property",
+            "name": "Tool_Current",
+            "schema": "double"
+        },
+        {
+            "@type": "Property",
+            "name": "Tool_Temperature",
+            "schema": "double"
+        },
+        {
+            "@type": "Property",
+            "name": "TCP_Force",
+            "schema": "double"
+        },
+        {
+            "@type": "Property",
+            "name": "Anomaly_State",
+            "schema": "integer"
+        }
+    ],
+    "@context": "dtmi:dtdl:context;2"
+}
