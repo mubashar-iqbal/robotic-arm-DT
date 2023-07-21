@@ -8,6 +8,9 @@ from azure.identity import DefaultAzureCredential
 from azure.identity import VisualStudioCodeCredential
 import os
 
+#this function can be used to connect to the microsoft azure platform.
+#insert the url of the specific azure instance you want to connect to.
+#afterwards the service_client will be returned, which can further be used to push updates to the twin
 def connect_azure():
     #getting the credentials
 
@@ -23,6 +26,8 @@ def connect_azure():
     
     return service_client
 
+#this function fetches the data of a dataset for a given index. It will
+#later be be used to get the feature data during the simulation
 def select_row(df, index):
     row = df.loc[index]
 
@@ -32,11 +37,20 @@ def select_row(df, index):
     #Return variables
     return locals()
 
+#this function enables to get the stored values on the digital twin model.
+#the twin_id represents the name given to the twin (in this case 'RoboArm')
+#furthremore, the service_client must be provided
+#lastly, the component defines which component data should be accessed (which sensor)
 def get_twin_state(twin_id, service_client, component):
     twin = service_client.get_digital_twin(twin_id)
     twin_state_value = twin[component]
     return twin_state_value
 
+#this function updated the digital twin on the microsoft azure platform.
+#to do so, it takes the newly received data from the simulation dataset by applying the select_row() function
+#also, it stores the value that was predicted for the current anomaly state.
+#all of these values are then sent to the digital twin
+#to check if the data was sent correctly, I would recommend to check the values on the digital twin UI itself.
 def update_machine_2(model_name: str, df, index, y_predicted):
     new_data = select_row(df, index)
     pred_anomaly = y_predicted
@@ -78,6 +92,10 @@ def update_machine_2(model_name: str, df, index, y_predicted):
     service_client.update_digital_twin(model_name, patchModel)
 
 #requires additional code to be updated automatically
+#this function plots the values currently stored in the digital twin
+#furthermore, it acts as something similar to a dachboard.
+#all of the current values are displayed in barplots.
+#in case an anomaly was found during predict_model(), the plot will display an alert message
 def plot_twin_state(_=None):
     norm_of_cartesion_linear_momentum = get_twin_state('RoboArm', service_client, 'Norm_of_Cartesion_Linear_Momentum')
     robot_current = get_twin_state('RoboArm', service_client, 'Robot_Current')

@@ -6,6 +6,10 @@ from sklearn.metrics import accuracy_score
 from sklearn.metrics import confusion_matrix
 from ipywidgets import Output, VBox, Button
 
+
+#build a random forest model 
+#the model will be trained on a provided X_traind and y_train
+#afterwards the received accuracy score will be printed together with a confusion matrix
 def train_model(X_train, X_test, y_train, y_test):
     # create rf classifier
     global rf
@@ -33,6 +37,8 @@ def train_model(X_train, X_test, y_train, y_test):
 
 ####################################################################
 
+#this function predicts an anomaly state given a test set and an already trained model
+#it returns the result of the prediction, which is either 0 or 1.
 def predict_model(df_sim, index, model):
     global count_ones, prediction_count, prediction_list, y_predicted
     #has to be single line!
