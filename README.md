@@ -56,7 +56,7 @@ This script contains all steps related to the Digital Twin instance on the Micro
 This file contains all code neccessary to train a prediction model and furthermore predict loval instances. The function train_model() will create a random forest model, based on the provided input. Additionally, it will display the achived accuracy score and show a confusion matrix. predict_model() can then be used to predict the anomaly state for current instances. 
 
 #### _predictive_maintenance.py_
-This script focuses on the predictive maintenance. By using SHAP and it´s benefits in explainability for machine learning algorithms, the causes for the anomalies can be pin-pointed and countermeasures initiated. Here is an exmaple for the generated SHAP bar plot in case of a detected anomaly. Each bar represents an individual components/feature. Features marked in red, positivly contributed to the prediction. Be aware, that it only indicates correlation to the output of the prediction and not to a specific instance of the output. 
+This script focuses on the predictive maintenance. By using SHAP and it´s benefits in explainability for machine learning algorithms, the causes for the anomalies can be pin-pointed and countermeasures initiated. Here is an exmaple for the generated SHAP bar plot in case of a detected anomaly. Each bar represents an individual component/feature. Features marked in red, positivly contributed to the prediction. Be aware, that it only indicates correlation to the output of the prediction and not to a specific instance of the output. 
 ![shap-bar-plot](https://github.com/h1548782/seleniumforest/assets/137823205/141bce59-5e14-4d18-a441-7f583fe05dc2)
 
 
