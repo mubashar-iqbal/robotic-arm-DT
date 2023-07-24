@@ -55,50 +55,11 @@ This script contains all steps related to the Digital Twin instance on the Micro
 This file contains all code neccessary to train a prediction model and furthermore predict loval instances. The function train_model() will create a random forest model, based on the provided input. Additionally, it will display the achived accuracy score and show a confusion matrix. predict_model() can then be used to predict the anomaly state for current instances. 
 
 #### predictive_maintenance.py
-This script focuses on the predictive maintenance. By using SHAP and it´s benefits in explainability for machine learning algorithms, the causes for teh anomalies can be pin-pointed and countermease initiated. 
+This script focuses on the predictive maintenance. By using SHAP and it´s benefits in explainability for machine learning algorithms, the causes for the anomalies can be pin-pointed and countermease initiated. 
 
-```
-!az login
-```
-A browser window will open and you will be asked to enter your Azure credentials. This enables the usage of Azure functionalities within VSC, without having to manually authenticate. 
-
-```
-Random Forest
-```
-Builds a random forest model with the provided training data. At the end, the accuracy score and confusion matrix of the test set will be printed.
-
-```
-Permutation Importance
-```
-Displays the permutation feature importance of the training data. At the end it prints the regarding importance score for each feature used. Additionaly, the standard deviation for each feature is displayed.
-
-```
-SHAP
-```
-The SHAP section focuses on providing further insight into the various features. It shows plot of either global or local instances. Furthermore, there is a seperation between normal and anamolous occurences. 
 
 ### Simulation
-The following functions are used to run the simulation of a running robotic arm. During the simulation, the test set of the previously build train- and test split was used. It is neccessary to run each code cell before starting the simulation, as it requires trained models to run without errors.
-
-```
-select_row()
-```
-This function fetches a specific line out of the provided dataframe by using the name of the dataframe and the desired index row as input. This data will then be used to update the model on the Azure platform.
-
-```
-update_machine()
-```
-This cell applies the previously generated function _select_row()_ and updates the existing model on the Azure platform. In addition, to the inputs required for _select_row()_ the function also requires the Digital Twin´s name in order to indentify the correct twin instance.
-
-```
-predict_model()
-```
-This function requires the dataframe used for simulation, the index identifying a specific row, and a trained model as input. It transforms the row of data into processable form and predicts if the occurence is an anomaly or not, given the earlier trained random forest model. 
-
-```
-start_machine()
-```
-This simulates a running robotic arm without any labled information about anomalies. By starting the machine, the code will iterate over the available simulation dataframe. For each entry the function will update the model on Azure platform with _update_machine()_ and furthermore, predict if the current data suggests the occurence of anomalies. This will be done every second, however speed can be adjusted with the _time.sleep()_ module, depending on  local available computing power. Please note, that there is no break condition. The machine will run untill the test set is out of data, or it is interruppted manually.
+The following functions are used to run the simulation of a running robotic arm. The main notebook used for this is the Selenium Forest.ipynb jupyter file. It imports the predefined function from all of the available python scripts (see above). A detailed description of each function can be found within the scripts.
 
 
 ## License agreement
