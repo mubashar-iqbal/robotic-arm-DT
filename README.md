@@ -38,7 +38,7 @@ To run this project, install the following modules locally by using pip or your 
 %pip install azure.digitaltwins.core
 ```
 
-In addition to an active Mincrosoft Azure account, the Microsoft Azure CLI is also neccessary. It can be downloaded here:
+In addition to an active Microsoft Azure account, the Microsoft Azure CLI is also neccessary. It can be downloaded here:
 
 [Azure CLI](https://ojuliuscoder.medium.com/installing-and-using-azure-cli-in-visual-studio-code-a382d2b09bfa)
 
