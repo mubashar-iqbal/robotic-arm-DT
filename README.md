@@ -48,18 +48,18 @@ Make sure that the correct Digital Twin schema is setup on the Azure platform. O
 
 ### Python Scripts
 
-#### digital_twin_azure.py
+#### _digital_twin_azure.py_
 This script contains all steps related to the Digital Twin instance on the Microsoft Azure platform. It contains a function to connect to via browser, gathering available twin information, and lastly a function to send data to the Digital Twin. The script also includes the code for plotting a dashboard-like monitoring system. The system will display the current workload of the robotic arm´s components and the current anomaly state. Furthremore, it includes a visual alarm to display anomaly occurrences. 
 
-#### anomaly_detection.py
+#### _anomaly_detection.py_
 This file contains all code neccessary to train a prediction model and furthermore predict loval instances. The function train_model() will create a random forest model, based on the provided input. Additionally, it will display the achived accuracy score and show a confusion matrix. predict_model() can then be used to predict the anomaly state for current instances. 
 
-#### predictive_maintenance.py
+#### _predictive_maintenance.py_
 This script focuses on the predictive maintenance. By using SHAP and it´s benefits in explainability for machine learning algorithms, the causes for the anomalies can be pin-pointed and countermease initiated. 
 
 
 ### Simulation
-#### Selenium Forest.ipynb
+#### _Selenium Forest.ipynb_
 The following functions are used to run the simulation of a running robotic arm. The main notebook used for this is the Selenium Forest.ipynb jupyter file. It imports the predefined function from all of the available python scripts (see above). A detailed description of each function can be found within the scripts.
 
 
