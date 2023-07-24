@@ -49,18 +49,23 @@ Make sure that the correct Digital Twin schema is setup on the Azure platform. O
 ### Python Scripts
 
 #### _digital_twin_azure.py_
-This script contains all steps related to the Digital Twin instance on the Microsoft Azure platform. It contains a function to connect to via browser, gathering available twin information, and lastly a function to send data to the Digital Twin. The script also includes the code for plotting a dashboard-like monitoring system. The system will display the current workload of the robotic arm´s components and the current anomaly state. Furthremore, it includes a visual alarm to display anomaly occurrences. 
+This script contains all steps related to the Digital Twin instance on the Microsoft Azure platform. It contains a function to connect to via browser, gathering available twin information, and lastly a function to send data to the Digital Twin. The script also includes the code for plotting a dashboard-like monitoring system. The system will display the current workload of the robotic arm´s components and the current anomaly state. Furthremore, it includes a visual alarm to display anomaly occurrences.
+![dashboard](https://github.com/h1548782/seleniumforest/assets/137823205/26feb273-7a63-4879-b92a-2bc5eca3c673)
 
 #### _anomaly_detection.py_
 This file contains all code neccessary to train a prediction model and furthermore predict loval instances. The function train_model() will create a random forest model, based on the provided input. Additionally, it will display the achived accuracy score and show a confusion matrix. predict_model() can then be used to predict the anomaly state for current instances. 
 
 #### _predictive_maintenance.py_
-This script focuses on the predictive maintenance. By using SHAP and it´s benefits in explainability for machine learning algorithms, the causes for the anomalies can be pin-pointed and countermease initiated. 
+This script focuses on the predictive maintenance. By using SHAP and it´s benefits in explainability for machine learning algorithms, the causes for the anomalies can be pin-pointed and countermease initiated. Here is an exmaple for the generated SHAP bar plot in case of a detected anomaly. Each bar represents an individual components/feature. Features marked in red, positivly contributed to the prediction. Be aware, that it only indicates correlation to the output of the prediction and not to a specific instance of the output. 
+![shap-bar-plot](https://github.com/h1548782/seleniumforest/assets/137823205/141bce59-5e14-4d18-a441-7f583fe05dc2)
+
 
 
 ### Simulation
 #### _Selenium Forest.ipynb_
 The following functions are used to run the simulation of a running robotic arm. The main notebook used for this is the Selenium Forest.ipynb jupyter file. It imports the predefined function from all of the available python scripts (see above). A detailed description of each function can be found within the scripts.
+
+
 
 
 ## License agreement
