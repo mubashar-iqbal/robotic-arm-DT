@@ -7,7 +7,7 @@
 * [Technologies](#technologies)
 * [Setup](#setup)
 * [Algorithm description](#algorithm-description)
-	* [Pre-requisites](#pre-requisites)
+	* [Python Scripts](#python-scripts)
    	* [Simulation](#simulation)
 * [License agreement](#license-agreement)
 
@@ -46,12 +46,16 @@ Make sure that the correct Digital Twin schema is setup on the Azure platform. O
 
 ## Algorithm Description
 
-### Pre-requisites
+### Python Scripts
 
-```
-Generate Model
-```
-The code generates a JSON file to set up the first Digital Twin instance on the Microsoft Azure platform. As input use the 'robotic-arms.csv'. The original CSV contains columns that are not used during this project. Therefore, it is recommended to delete the unwanted ones before generating the model.
+#### digital_twin_azure.py
+This script contains all steps related to the Digital Twin instance on the Microsoft Azure platform. It contains a function to connect to via browser, gathering available twin information, and lastly a function to send data to the Digital Twin. The script also includes the code for plotting a dashboard-like monitoring system. The system will display the current workload of the robotic arm´s components and the current anomaly state. Furthremore, it includes a visual alarm to display anomaly occurrences. 
+
+#### anomaly_detection.py
+This file contains all code neccessary to train a prediction model and furthermore predict loval instances. The function train_model() will create a random forest model, based on the provided input. Additionally, it will display the achived accuracy score and show a confusion matrix. predict_model() can then be used to predict the anomaly state for current instances. 
+
+#### predictive_maintenance.py
+This script focuses on the predictive maintenance. By using SHAP and it´s benefits in explainability for machine learning algorithms, the causes for teh anomalies can be pin-pointed and countermease initiated. 
 
 ```
 !az login
