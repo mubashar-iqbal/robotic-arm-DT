@@ -14,13 +14,13 @@ import os
 def connect_azure():
     #getting the credentials
 
-    #define the URL of your Digital Twin instance on the Azure platzform
+    #define the URL of Digital Twin instance on the Azure platform
     url = "SeleniumForest.api.weu.digitaltwins.azure.net"
 
     #store the gathered credentials in a variable
     credential = DefaultAzureCredential()
     #create an instance of the Digital Twin Client
-    #It can be resued later on
+    #it can be resued later on
     global service_client
     service_client = DigitalTwinsClient(url, credential)
     
@@ -51,7 +51,7 @@ def get_twin_state(twin_id, service_client, component):
 #also, it stores the value that was predicted for the current anomaly state.
 #all of these values are then sent to the digital twin
 #to check if the data was sent correctly, I would recommend to check the values on the digital twin UI itself.
-def update_machine_2(model_name: str, df, index, y_predicted):
+def update_machine(model_name: str, df, index, y_predicted):
     new_data = select_row(df, index)
     pred_anomaly = y_predicted
 
@@ -87,7 +87,6 @@ def update_machine_2(model_name: str, df, index, y_predicted):
     "path": "/Anomaly_State",
     "value": int(pred_anomaly)
   }
-
 ]
     service_client.update_digital_twin(model_name, patchModel)
 
