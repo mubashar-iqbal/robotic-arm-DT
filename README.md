@@ -63,7 +63,7 @@ This script focuses on the predictive maintenance. By using SHAP and it´s benef
 
 ### Simulation
 #### _simulation_robotic_arm.ipynb_
-The scripts mentioned above are used to run the simulation of a running robotic arm. The main notebook used for this is the simulation_robotic_arm.ipynb jupyter file. It imports the predefined functions from all of the available python scripts. A detailed description of each function can be found within the script files.
+The scripts mentioned above are used to run the simulation of a running robotic arm. The main notebook for this purpose is the simulation_robotic_arm.ipynb jupyter file. It imports the predefined functions from all of the available python scripts. A detailed description of each function can be found within the script files.
 
 
 
