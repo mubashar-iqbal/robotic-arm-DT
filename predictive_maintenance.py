@@ -1,6 +1,7 @@
 import matplotlib
 matplotlib.use('TkAgg')
 import shap
+import matplotlib.pyplot as plt
 
 #this function will be used in case an anomaly was detected with predict_model() from anomaly_detection.py.
 #it displays a shap plot to showcase which sensor component was responsible for the prediction of the anomaly.
@@ -30,6 +31,7 @@ def explain_prediction(df, index, model):
 
     # Bar plot for feature importances of the specific instance
     bar_plot = shap.plots.bar(explanation)
+    plt.title("SHAP Feature Importance")
     
     return bar_plot
     
