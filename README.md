@@ -12,7 +12,12 @@
 * [License agreement](#license-agreement)
 
 ## General info
-This project contains the code for my master thesis. 
+This project contains the code for my master thesis. The video below offers a quick overview about the proposed framework.
+
+
+https://github.com/h1548782/seleniumforest/assets/137823205/c92cf1e2-cc94-421e-b482-8b73824176c2
+
+
 	
 ## Technologies
 Project is created with:
