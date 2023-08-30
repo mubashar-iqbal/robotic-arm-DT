@@ -1,37 +1,32 @@
 import matplotlib
 matplotlib.use('TkAgg')
 import shap
-import matplotlib.pyplot as plt
+import numpy as np
+from sklearn.ensemble import RandomForestClassifier
 
-#this function will be used in case an anomaly was detected with predict_model() from anomaly_detection.py.
-#it displays a shap plot to showcase which sensor component was responsible for the prediction of the anomaly.
-def explain_prediction(df, index, model):
-    #this only works for local predictions (single instances)
-    #find first anomaly in test set
 
-    shap.initjs()
+def explain_prediction(X_train, y_train, X_test, sample_ind):
+        model = RandomForestClassifier(n_estimators=100, random_state=42)
+        model.fit(X_train, y_train)
+        y_predicted = model.predict(X_test)
 
-    #Create Explainer
-    #explainer = shap.Explainer(model)
-    #Shap value for specific instance
-    #shap_values = explainer.shap_values(df.iloc[index]) 
+        explainer = shap.Explainer(model)
+        shap_values = explainer(X_test)
 
-    #force plot for that specific instance 
-    #force_plot = shap.force_plot(explainer.expected_value[0], shap_values[0], df.iloc[index])
-    #bar_plot = shap.plots.bar(shap_values[0])
-    
-    
-        # Create Explainer
-    explainer = shap.Explainer(model)
-    # SHAP values for specific instance
-    shap_values = explainer.shap_values(df.iloc[index])
+        positive_indices = np.where(y_predicted == 1)[0]
+        shap_values_positive = shap_values[positive_indices, :, 1]
 
-    # Create a SHAP Explanation object for the specific instance
-    explanation = shap.Explanation(values=shap_values[0], base_values=explainer.expected_value[0], data=df.iloc[index])
+        beeswarm = shap.plots.beeswarm(shap_values_positive)
+        
+        #Generate partial dependence plot
+        #This code generates a SHAP partial dependence plot for a specific instance.
+        #The instance can be chosen by chaning the sample_ind value (integer).
+        sample_ind = sample_ind
+        pdp = shap.partial_dependence_plot(
+        "Tool_Temperature", model.predict, X_test, model_expected_value=True,
+        feature_expected_value=True, ice=False,
+        shap_values=shap_values_positive[sample_ind:sample_ind+1,:]
+        )
+        
+        return beeswarm, pdp
 
-    # Bar plot for feature importances of the specific instance
-    bar_plot = shap.plots.bar(explanation)
-    plt.title("SHAP Feature Importance")
-    
-    return bar_plot
-    
