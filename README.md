@@ -12,7 +12,7 @@
 * [License agreement](#license-agreement)
 
 ## General info
-This project contains the code for my master thesis. The video below offers a quick overview about the proposed framework.
+This project contains the code for my master thesis. The video below offer a quick overview about the proposed framework and a demo of the simulation.
 
 
 
