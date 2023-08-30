@@ -69,10 +69,12 @@ This file contains all code neccessary to train a prediction model and furthermo
 
 #### _predictive_maintenance.py_
 This script focuses on the predictive maintenance. By using SHAP and it´s benefits in explainability for machine learning algorithms, the causes for the anomalies can be pin-pointed and countermeasures initiated. Here is an exmaple for the generated SHAP beeswarm plot for the SHAP values of all predicted anomalies. Dots marked in red, display high feature value, whereas features marked in blue, display low feature value. 
-![shap_beeswarm_simulation](https://github.com/h1548782/seleniumforest/assets/137823205/fb5dd377-db2d-4553-b2e0-763122cf2bbd)
+![shap_beeswarm_simulation](https://github.com/h1548782/seleniumforest/assets/137823205/ecb317ac-804f-4cb2-a52b-284c23a0c7fc)
+
 
 Furthermore, it contains code for a SHAP partial dependence plot. That way, specific features can be analyzed in more detail, giving more insight into the prediction process.
-![shap_partial_dependence_plot](https://github.com/h1548782/seleniumforest/assets/137823205/6f512bcf-5dce-4406-898c-23d33a30bc3d)
+![shap_partial_dependence_plot](https://github.com/h1548782/seleniumforest/assets/137823205/ea245c09-a60b-405b-b776-daf0d91462c4)
+
 
 
 
