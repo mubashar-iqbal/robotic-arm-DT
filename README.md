@@ -15,7 +15,14 @@
 This project contains the code for my master thesis. The video below offers a quick overview about the proposed framework.
 
 
-https://github.com/h1548782/seleniumforest/assets/137823205/c92cf1e2-cc94-421e-b482-8b73824176c2
+
+https://github.com/h1548782/seleniumforest/assets/137823205/8cd7ae02-ea2a-4209-8dcb-6ee301cc4f49
+
+
+
+
+https://github.com/h1548782/seleniumforest/assets/137823205/20f58627-d19d-4a0f-affb-84929a0e356c
+
 
 
 	
