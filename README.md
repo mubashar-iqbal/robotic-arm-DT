@@ -48,6 +48,8 @@ To run this project, install the following modules locally by using pip or your 
 %pip install matplotlib
 %pip install azure.identity
 %pip install azure.digitaltwins.core
+%pip install ipywidgets
+
 ```
 
 In addition to an active Microsoft Azure account, the Microsoft Azure CLI is also neccessary. It can be downloaded here:
